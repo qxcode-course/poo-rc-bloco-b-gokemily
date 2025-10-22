@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-22_02-28-45",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n\n    def getTamanho(self) -> str:\n        return self.__tamanho\n    \n    def setTamanho(self, valor: str):\n        if valor == \"PP\" or \"M\" or \"G\" or \"GG\" or \"XG\":\n            self.__tamanho = valor #n\u00e3o sei se est\u00e1 certo. Ajeitar depois.\n        else:\n            print(\"Tamanho inv\u00e1lido. Tamanhos permitidos: PP, P, M, G, GG e XG.\")\n    \nroupa = Roupa()\n\nwhile roupa.getTamanho() == \"\":\n    print(\"Digite seu tamanho de roupa\")\n    tamanho = input()\n    roupa.setTamanho(tamanho)\n\nprint(\"Parabens, voc\u00ea comprou uma roupa tamanho\", roupa.getTamanho())\n\ndef main():\n    roupa = Roupa()\n    while True:\n        line: str = input()\n        arg: list[str] = line.split(\" \")\n        print(\"$\" + line)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"grow\":\n            roupa(str(arg[1]))\n        elif arg[0] == \"\":\n            print(self.__roupa())\n        elif arg[0] == \"init\":\n            roupa : Roupa = Roupa(arg[1])\n        elif arg[0] == \"show\":\n            print(roupa)\n        else:\n           print(\"Comando nao encontrado\")\n\nmain()",
+            "lines": "43"
+        }
+    ]
+}
