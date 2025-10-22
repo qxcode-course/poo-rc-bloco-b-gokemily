@@ -3,3 +3,7 @@
 2025-10-22 02:10:11, EXEC, v:1, k:poo@chinela, mode:FREE
 2025-10-22 02:28:43, MOVE, v:1, k:poo@camisa, mode:PICK
 2025-10-22 02:28:45, EXEC, v:1, k:poo@camisa, mode:FREE, size:43
+2025-10-22 23:43:05, SELF, v:1, k:poo@chinela, rate:100, alone:10, study:400
+2025-10-22 23:43:22, SELF, v:1, k:poo@camisa, rate:100, alone:10, study:500
+2025-10-22 23:43:31, MOVE, v:1, k:poo@roupa, mode:DOWN
+2025-10-22 23:43:33, MOVE, v:1, k:poo@roupa, mode:PICK
