@@ -1,0 +1,4 @@
+2025-10-21 13:26:56, MOVE, v:1, k:poo@chinela, mode:PICK
+2025-10-21 13:27:24, EXEC, v:1, k:poo@chinela, mode:FREE, size:28
+2025-10-21 13:33:22, MOVE, v:1, k:poo@camisa, mode:DOWN
+2025-10-21 13:33:24, MOVE, v:1, k:poo@camisa, mode:PICK

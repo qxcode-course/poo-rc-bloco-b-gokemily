@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2025-10-07_14-27-02",
-            "content": "",
+            "content": "@@ -1,579 +0,0 @@\n-class Chinela:%0A    def _init_(self):%0A        self.__tamanho: int = 0%0A%0A    def _str_(self)-%3Estr:%0A        return f%22sua xinela %C3%A9 tamanho: %7Bself.__tamanho%7D%22%0A    %0A    def set_tamanho(self, tam: int):%0A        if tam %3E= 20 and tam %3C= 50 and tam %252 == 0:%0A            self.__tamanho= tam%0A            return%0A        print(%22tamanho inv%C3%A1lido%22)%0A%0A%0A    def get_tamanho(self):%0A        return self.__tamanho%0A%0Adef main():%0A    chinela=Chinela()%0A    while True:%0A        n= int(input())%0A        chinela.set_tamanho(n)%0A        if chinela.get_tamanho()!=0:%0A            break%0A%0A    print(chinela)%0A%0Amain()\n",
             "lines": "0"
+        },
+        {
+            "label": "2025-10-21_13-27-24",
+            "content": "@@ -110,18 +110,17 @@\n n f%22sua \n-ch\n+x\n inela %C3%A9 \n@@ -444,17 +444,16 @@\n        n\n- \n = int(in\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-22_02-09-53",
+            "content": "class Chinela:\n    def _init_(self):\n        self.__tamanho: int = 0\n\n    def _str_(self)->str:\n        return f\"sua chinela \u00e9 tamanho: {self.__tamanho}\"\n    \n    def set_tamanho(self, tam: int):\n        if tam >= 20 and tam <= 50 and tam %2 == 0:\n            self.__tamanho= tam\n            return\n        print(\"tamanho inv\u00e1lido\")\n\n\n    def get_tamanho(self):\n        return self.__tamanho\n\ndef main():\n    chinela=Chinela()\n    while True:\n        n = int(input())\n        chinela.set_tamanho(n)\n        if chinela.get_tamanho()!=0:\n            break\n\n    print(chinela)\n\nmain()",
+            "lines": "28"
         }
     ]
 }
