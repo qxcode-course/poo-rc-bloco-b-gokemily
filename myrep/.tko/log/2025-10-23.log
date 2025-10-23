@@ -11,3 +11,11 @@
 2025-10-23 02:26:01, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:38
 2025-10-23 02:32:38, EXEC, v:1, k:poo@roupa, mode:FULL, rate:100, size:38
 2025-10-23 02:37:48, MOVE, v:1, k:poo@roupa, mode:BACK
+2025-10-23 02:41:09, SELF, v:1, k:poo@roupa, rate:100, alone:10, study:220
+2025-10-23 02:41:21, MOVE, v:1, k:poo@relogio, mode:DOWN
+2025-10-23 02:41:27, MOVE, v:1, k:poo@notebook, mode:DOWN
+2025-10-23 02:41:29, MOVE, v:1, k:poo@motoca, mode:DOWN
+2025-10-23 02:41:30, MOVE, v:1, k:poo@grafite, mode:DOWN
+2025-10-23 02:41:32, MOVE, v:1, k:poo@motouber, mode:DOWN
+2025-10-23 02:41:35, MOVE, v:1, k:poo@tamagotchi, mode:DOWN
+2025-10-23 02:41:37, MOVE, v:1, k:poo@charger, mode:DOWN
