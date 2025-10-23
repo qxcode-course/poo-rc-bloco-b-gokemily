@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-22_23-55-02",
+            "content": "@@ -664,38 +664,47 @@\n           print(\n+self.__\n camisa\n+()\n )%0A        elif a\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-10-23_02-17-58",
+            "content": "@@ -617,19 +617,8 @@\n misa\n-.setTamanho\n (str\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-10-23_02-20-11",
+            "content": "@@ -67,72 +67,8 @@\n = %22%22\n-%0A    %0A    def __str__(self):%0A        return f%22size: (%7Btamanho%7D)%22\n %0A%0A  \n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-10-23_02-24-36",
+            "content": "@@ -117,23 +117,16 @@\n size: (%7B\n-self.__\n tamanho%7D\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-10-23_02-25-02",
+            "content": "@@ -378,35 +378,46 @@\n nt(%22\n-fail: Valor inv%C3%A1lido, tente\n+Tamanho inv%C3%A1lido. Tamanhos permitidos:\n  PP,\n@@ -433,13 +433,13 @@\n  GG \n-ou\n+e\n  XG\n+.\n %22)%0A \n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-10-23_02-26-01",
+            "content": "@@ -274,81 +274,36 @@\n  or \n-valor == %22P%22 or valor == %22M%22 or valor == %22G%22 or valor == %22GG%22 or valor ==\n+%22P%22 or %22M%22 or %22G%22 or %22GG%22 or\n  %22XG\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-10-23_02-32-38",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n    \n    def __str__(self):\n        return f\"size: ({self.__tamanho})\"\n\n    def getTamanho(self) -> str:\n        return self.__tamanho\n    \n    def setTamanho(self, valor: str):\n        if valor == \"PP\" or valor == \"P\" or valor == \"M\" or valor == \"G\" or valor == \"GG\" or valor == \"XG\":\n            self.__tamanho = valor \n        else:\n            print(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\")\n    \n\ndef main():\n    camisa = Camisa()\n    while True:\n        line: str = input()\n        arg: list[str] = line.split(\" \")\n        print(\"$\" + line)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"size\":\n            camisa.setTamanho(str(arg[1]))\n        elif arg[0] == \"\":\n            print(camisa)\n        elif arg[0] == \"init\":\n            camisa : camisa = camisa(arg[1])\n        elif arg[0] == \"show\":\n            print(camisa)\n        else:\n           print(\"Comando nao encontrado\")\n\nmain()",
+            "lines": "38"
+        }
+    ]
+}
