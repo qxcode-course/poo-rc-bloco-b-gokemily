@@ -27,3 +27,16 @@ class Watch:
         return f"{:02}:{:02}:{:02}".format(self.getHora, self.getMinu, self.getSeg)
     
     def nextSecond(self):
+        if self.__seg == 59:
+            self.__seg = 0
+            if self.__minu == 59:
+                self.__minu = 0
+                if self.__hora == 23:
+                    self.__hora = 0
+                else:
+                    self.__hora += 1
+            else:
+                self.__minu += 1
+        else:
+            self.__seg += 1
+        
