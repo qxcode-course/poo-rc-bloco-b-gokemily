@@ -24,3 +24,31 @@
 2025-10-26 14:58:35, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101
 2025-10-26 15:01:11, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101
 2025-10-26 15:02:13, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101
+2025-10-26 16:39:04, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-26 16:39:06, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:100
+2025-10-26 16:40:11, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:100
+2025-10-26 16:41:54, EXEC, v:1, k:poo@motoca, mode:FULL, rate:13, size:100
+2025-10-26 16:47:24, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-26 16:47:40, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-26 16:47:42, EXEC, v:1, k:poo@motoca, mode:FULL, rate:13, size:109
+2025-10-26 16:48:13, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-26 16:50:16, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-26 16:50:17, EXEC, v:1, k:poo@motoca, mode:FULL, rate:13, size:100
+2025-10-26 16:51:44, EXEC, v:1, k:poo@motoca, mode:FULL, rate:20, size:103
+2025-10-26 16:52:03, EXEC, v:1, k:poo@motoca, mode:FULL, rate:33, size:103
+2025-10-26 16:52:51, EXEC, v:1, k:poo@motoca, mode:FULL, rate:33, size:103
+2025-10-26 16:53:08, EXEC, v:1, k:poo@motoca, mode:FULL, rate:60, size:103
+2025-10-26 17:02:47, EXEC, v:1, k:poo@motoca, mode:FULL, rate:66, size:103
+2025-10-26 17:03:21, EXEC, v:1, k:poo@motoca, mode:FULL, rate:66, size:103
+2025-10-26 17:04:53, EXEC, v:1, k:poo@motoca, mode:FULL, rate:66, size:103
+2025-10-26 17:05:02, EXEC, v:1, k:poo@motoca, mode:FULL, rate:66, size:103
+2025-10-26 17:05:11, EXEC, v:1, k:poo@motoca, mode:FULL, rate:66, size:103
+2025-10-26 17:05:48, EXEC, v:1, k:poo@motoca, mode:FULL, rate:80, size:102
+2025-10-26 17:06:23, EXEC, v:1, k:poo@motoca, mode:FULL, rate:86, size:102
+2025-10-26 17:06:57, EXEC, v:1, k:poo@motoca, mode:FULL, rate:86, size:103
+2025-10-26 17:07:11, EXEC, v:1, k:poo@motoca, mode:FULL, rate:93, size:103
+2025-10-26 17:07:49, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100, size:103
+2025-10-26 17:07:54, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-26 17:09:50, SELF, v:1, k:poo@motoca, rate:100, human:_, other:_, alone:6, study:90
+2025-10-26 17:10:09, MOVE, v:1, k:poo@motouber, mode:PICK
+2025-10-26 17:10:17, MOVE, v:1, k:poo@motouber, mode:BACK
