@@ -1,0 +1,26 @@
+2025-10-26 13:43:53, MOVE, v:1, k:poo@tamagotchi, mode:PICK
+2025-10-26 13:43:55, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:116
+2025-10-26 13:44:42, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 13:50:50, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 13:51:18, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 13:51:32, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 13:53:01, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 14:27:20, MOVE, v:1, k:poo@tamagotchi, mode:PICK
+2025-10-26 14:27:22, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0
+2025-10-26 14:28:53, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 14:29:15, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:113
+2025-10-26 14:29:25, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 14:33:18, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 14:34:10, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 14:35:31, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 14:35:57, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 14:36:11, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:115
+2025-10-26 14:52:55, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:101
+2025-10-26 14:54:06, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:101
+2025-10-26 14:54:30, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101
+2025-10-26 14:56:32, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101
+2025-10-26 14:57:01, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101
+2025-10-26 14:57:29, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101
+2025-10-26 14:58:35, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101
+2025-10-26 15:01:11, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101
+2025-10-26 15:02:13, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101

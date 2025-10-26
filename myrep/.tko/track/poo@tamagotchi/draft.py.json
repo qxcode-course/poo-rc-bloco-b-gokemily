@@ -1,0 +1,119 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_13-43-55",
+            "content": "@@ -2332,32 +2332,33 @@\n t esta morto%22)%0A%0A\n+%0A\n     def Shower(s\n@@ -2836,12 +2836,8 @@\n 0,0,\n- 0, \n 0)%0A \n",
+            "lines": "116"
+        },
+        {
+            "label": "2025-10-26_13-44-42",
+            "content": "@@ -2831,16 +2831,20 @@\n ame(0,0,\n+ 0, \n 0)%0A    w\n@@ -3444,27 +3444,16 @@\n ame(\n-Tamagochi: \n int(arg%5B\n 0%5D),\n@@ -3448,17 +3448,17 @@\n int(arg%5B\n-0\n+1\n %5D),int(a\n@@ -3452,33 +3452,33 @@\n arg%5B1%5D),int(arg%5B\n-1\n+2\n %5D))%0A        else\n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_13-50-50",
+            "content": "@@ -3445,17 +3445,18 @@\n amagochi\n-(\n+: \n int(arg%5B\n@@ -3471,17 +3471,16 @@\n arg%5B1%5D))\n-)\n %0A       \n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_13-51-18",
+            "content": "@@ -2830,16 +2830,18 @@\n Game(0,0\n+,0\n )%0A    wh\n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_13-51-32",
+            "content": "@@ -2822,26 +2822,24 @@\n  game = \n-Tamagochi(\n+Game(0,0\n )%0A    wh\n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_13-53-01",
+            "content": "@@ -236,17 +236,19 @@\n __age = \n-0\n+age\n %0A       \n@@ -263,19 +263,20 @@\n alive = \n-Tru\n+aliv\n e%0A      \n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_14-28-53",
+            "content": "@@ -77,16 +77,88 @@\n = 100):%0A\n+        self.__energyMax = energyMax%0A        self.__cleanMax = cleanMax%0A\n         \n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_14-29-15",
+            "content": "@@ -81,80 +81,8 @@\n 0):%0A\n-        self.__energyMax = energyMax%0A        self.__cleanMax = cleanMax%0A\n     \n",
+            "lines": "113"
+        },
+        {
+            "label": "2025-10-26_14-29-25",
+            "content": "@@ -722,23 +722,16 @@\n      if \n-self.__\n energy %3E\n@@ -738,23 +738,16 @@\n = 1 and \n-self.__\n energy %3C\n@@ -747,23 +747,16 @@\n nergy %3C \n-self.__\n energyMa\n@@ -900,23 +900,16 @@\n      if \n-self.__\n clean %3E=\n@@ -919,23 +919,16 @@\n and \n-self.__\n clean %3C \n self\n@@ -923,23 +923,16 @@\n clean %3C \n-self.__\n cleanMax\n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_14-33-18",
+            "content": "@@ -424,17 +424,19 @@\n .setAge(\n-0\n+age\n )%0A      \n@@ -451,19 +451,20 @@\n etAlive(\n-Tru\n+aliv\n e)%0A%0A    \n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_14-34-10",
+            "content": "@@ -3490,17 +3490,17 @@\n int(arg%5B\n-1\n+0\n %5D),int(a\n@@ -3502,17 +3502,17 @@\n int(arg%5B\n-2\n+1\n %5D)))%0A   \n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_14-35-31",
+            "content": "@@ -3248,17 +3248,16 @@\n   print(\n-%7B\n self.__b\n@@ -3263,17 +3263,16 @@\n bichinho\n-%7D\n )%0A      \n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_14-35-57",
+            "content": "@@ -3248,17 +3248,16 @@\n   print(\n-%22\n %7Bself.__\n@@ -3265,17 +3265,16 @@\n ichinho%7D\n-%22\n )%0A      \n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_14-36-11",
+            "content": "@@ -491,24 +491,55 @@\n energyMax):%0A\n+        if energyMax %3E= 1:%0A    \n         self\n@@ -601,24 +601,54 @@\n  cleanMax):%0A\n+        if cleanMax %3E= 1:%0A    \n         self\n@@ -708,32 +708,35 @@\n nergy):%0A        \n+if \n self.__energy = \n@@ -733,24 +733,153 @@\n _energy \n+%3E\n = \n-energy\n+1 and self.__energy %3C self.__energyMax:%0A            self.__energy += 1%0A        else:%0A            print(%22fail: pet morreu de fraqueza%22)\n %0A    %0A  \n@@ -907,32 +907,35 @@\n clean):%0A        \n+if \n self.__clean = c\n@@ -931,23 +931,150 @@\n __clean \n+%3E\n = \n-clean\n+1 and self.__clean %3C self.__cleanMax:%0A            self.__energy += 1%0A        else:%0A            print(%22fail: pet morreu de sujeira%22)\n %0A    %0A  \n@@ -1094,24 +1094,49 @@\n self, age):%0A\n+        if age %3E= 1:%0A    \n         self\n@@ -1146,74 +1146,215 @@\n age \n++\n = \n-age%0A%0A    def setAlive(self, alive):%0A        self.__alive = alive\n+1%0A        else:%0A            print(%22fail: pet esta morto%22)%0A%0A    def setAlive(self, alive):%0A        if alive == True:%0A            self.__alive = alive%0A        else:%0A            print(%22fail: pet esta morto%22)\n %0A   \n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-10-26_14-52-55",
+            "content": "@@ -2780,19 +2780,8 @@\n inho\n-(Tamagochi)\n %7D%22)%0A\n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_14-54-06",
+            "content": "@@ -2759,20 +2759,46 @@\n   print(\n-game\n+%22%7Bself.__bichinho(Tamagochi)%7D%22\n )%0A      \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_14-54-30",
+            "content": "@@ -2588,20 +2588,20 @@\n     \n-print(\n+game.\n shower\n+(\n )%0A  \n@@ -2645,18 +2645,18 @@\n     \n-print(\n+game.\n play\n+(\n )%0A  \n@@ -2701,19 +2701,19 @@\n     \n-print(\n+game.\n sleep\n+(\n )%0A  \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_14-56-32",
+            "content": "@@ -2590,17 +2590,17 @@\n   print(\n-S\n+s\n hower)%0A \n@@ -2647,17 +2647,17 @@\n   print(\n-P\n+p\n lay)%0A   \n@@ -2703,17 +2703,17 @@\n   print(\n-S\n+s\n leep)%0A  \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_14-57-01",
+            "content": "@@ -2594,21 +2594,16 @@\n int(\n-game.\n Shower)%0A\n     \n@@ -2598,16 +2598,16 @@\n Shower)%0A\n+\n         \n@@ -2647,21 +2647,16 @@\n   print(\n-game.\n Play)%0A  \n@@ -2685,16 +2685,16 @@\n sleep%22:%0A\n+\n         \n@@ -2703,21 +2703,16 @@\n   print(\n-game.\n Sleep)%0A \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_14-57-29",
+            "content": "@@ -2601,20 +2601,18 @@\n e.Shower\n-()\n )%0A\n+\n         \n@@ -2661,18 +2661,16 @@\n ame.Play\n-()\n )%0A      \n@@ -2695,16 +2695,16 @@\n sleep%22:%0A\n+\n         \n@@ -2723,18 +2723,16 @@\n me.Sleep\n-()\n )%0A      \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_14-58-35",
+            "content": "@@ -1538,18 +1538,13 @@\n nho.\n-getA\n+a\n live\n-()\n  == \n@@ -1568,27 +1568,22 @@\n ichinho.\n-getE\n+e\n nergy\n-()\n  %3C= self\n@@ -1594,28 +1594,25 @@\n ichinho.\n-getE\n+e\n nergyMax\n () and s\n@@ -1603,18 +1603,16 @@\n nergyMax\n-()\n  and sel\n@@ -1624,24 +1624,19 @@\n ichinho.\n-get\n Age\n-()\n  %3E= 0:%0A \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_15-01-11",
+            "content": "@@ -1717,18 +1717,16 @@\n etEnergy\n-()\n  -2)%0A   \n@@ -1783,18 +1783,16 @@\n getClean\n-()\n  -3)%0A   \n@@ -1845,18 +1845,16 @@\n o.getAge\n-()\n  +1)%0A   \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_15-02-13",
+            "content": "class Tamagochi:\n    def __init__(self, energyMax: int = 100, cleanMax: int = 100):\n        self.__energyMax = energyMax\n        self.__cleanMax = cleanMax\n        self.__energy = energyMax\n        self.__clean = cleanMax\n        self.__age = 0\n        self.__alive = True\n        self.setEnergyMax(energyMax)\n        self.setCleanMax(cleanMax)\n        self.setEnergy(energyMax)\n        self.setClean(cleanMax)\n        self.setAge(0)\n        self.setAlive(True)\n\n    def setEnergyMax(self, energyMax):\n        self.__energyMax = energyMax\n    \n    def setCleanMax(self, cleanMax):\n        self.__cleanMax = cleanMax\n    \n    def setEnergy(self, energy):\n        self.__energy = energy\n    \n    def setClean(self, clean):\n        self.__clean = clean\n    \n    def setAge(self, age):\n        self.__age = age\n\n    def setAlive(self, alive):\n        self.__alive = alive\n    \n    def getEnergyMax(self):\n        return self.__energyMax\n    def getCleanMax(self):\n        return self.__cleanMax\n    def getEnergy(self):\n        return self.__energyMax\n    def getClean(self):\n        return self.__cleanMax\n    def getAge(self):\n        return self.__age\n    def getAlive(self):\n        return self.__alive\n\nclass Game:\n    def __init__(self, game: Tamagochi):\n        self.__bichinho = game\n    \n    def __str__(self):\n        return f\"E:{self.__bichinho.getEnergy()}/{self.__bichinho.getEnergyMax()}, L:{self.__bichinho.getClean()}/{self.__bichinho.getCleanMax()}, I:{self.__bichinho.getAge()}\"\n\n    def Play(self):\n        if self.__bichinho.getAlive() == True and self.__bichinho.getEnergy() <= self.__bichinho.getEnergyMax() and self.__bichinho.getAge() >= 0:\n            self.__bichinho.setEnergy(self.__bichinho.getEnergy() -2)\n            self.__bichinho.setClean(self.__bichinho.getClean() -3)\n            self.__bichinho.setAge(self.__bichinho.getAge() +1)\n        else:\n            print(\"fail: pet esta morto\")\n\n    def Shower(self):\n        if self.__bichinho.alive == True:\n            self.bichinho.setClean(self.bichinho.getCleanMax())\n        else:\n            print(\"fail: pet esta morto\")\n\n    def Sleep(self):\n        if self.__bichinho.energy <= self.__bichinho.energyMax and self.__bichinho.energy > 0 and self.__bichinho.alive == True:\n            self.bichinho.setEnergy(self.bichinho.getEnergyMax())\n        else:\n            print(\"fail: pet esta morto\")\n\n\ndef main():\n    game = Tamagochi()\n    while True:\n        line: str = input()\n        arg: list[str] = line.split(\" \")\n        print(\"$\" + line)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"shower\":\n            print(game.Shower())\n        elif arg[0] == \"play\":\n            print(game.Play())\n        elif arg[0] == \"sleep\":\n            print(game.Sleep())\n        elif arg[0] == \"show\":\n            print(game)\n        elif arg[0] == \"set\":\n            game.setEnergy(int(arg[1]))\n            game.setClean(int(arg[2]))\n            game.setAge(int(arg[3]))\n        elif arg[0] == \"init\":\n            game: Game = Game(Tamagochi(int(arg[1]),int(arg[2])))\n        else:\n            print(\"fail: pet esta morto\")\n\nmain()",
+            "lines": "101"
+        }
+    ]
+}

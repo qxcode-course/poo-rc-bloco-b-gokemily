@@ -1,75 +1,63 @@
 class Tamagochi:
-    def __init__(self, energyMax: int = 100, cleanMax: int = 100, energy: int = 100, clean: int = 100, age: int = 0, alive: bool = True):
+    def __init__(self, energyMax: int = 100, cleanMax: int = 100):
         self.__energyMax = energyMax
         self.__cleanMax = cleanMax
-        self.__energy = energy
-        self.__clean = clean
-        self.__age = age
-        self.__alive = alive
+        self.__energy = energyMax
+        self.__clean = cleanMax
+        self.__age = 0
+        self.__alive = True
         self.setEnergyMax(energyMax)
         self.setCleanMax(cleanMax)
-        self.setEnergy(energy)
-        self.setClean(clean)
-        self.setAge(age)
-        self.setAlive(alive)
+        self.setEnergy(energyMax)
+        self.setClean(cleanMax)
+        self.setAge(0)
+        self.setAlive(True)
 
     def setEnergyMax(self, energyMax):
-        if energyMax >= 1:
-            self.__energyMax = energyMax
+        self.__energyMax = energyMax
     
     def setCleanMax(self, cleanMax):
-        if cleanMax >= 1:
-            self.__cleanMax = cleanMax
+        self.__cleanMax = cleanMax
     
     def setEnergy(self, energy):
-        if energy >= 1 and energy < energyMax:
-            self.__energy += 1
-        else:
-            print("fail: pet esta morto")
+        self.__energy = energy
     
     def setClean(self, clean):
-        if clean >= 1 and clean < cleanMax:
-            self.__energy += 1
-        else:
-            print("fail: pet morreu de sujeira")
+        self.__clean = clean
     
     def setAge(self, age):
-        if age >= 1:
-            self.__age += 1
-        else:
-            print("fail: pet esta morto")
+        self.__age = age
 
     def setAlive(self, alive):
-        if alive == True:
-            self.__alive = alive
-        else:
-            print("fail: pet esta morto")
+        self.__alive = alive
     
     def getEnergyMax(self):
         return self.__energyMax
     def getCleanMax(self):
         return self.__cleanMax
     def getEnergy(self):
-        return self.__energy
+        return self.__energyMax
     def getClean(self):
-        return self.__clean
+        return self.__cleanMax
     def getAge(self):
         return self.__age
     def getAlive(self):
         return self.__alive
 
 class Game:
-    def __init__(self, tamagochi: Tamagochi):
-        self.__bichinho = tamagochi
+    def __init__(self, game: Tamagochi):
+        self.__bichinho = game
     
     def __str__(self):
         return f"E:{self.__bichinho.getEnergy()}/{self.__bichinho.getEnergyMax()}, L:{self.__bichinho.getClean()}/{self.__bichinho.getCleanMax()}, I:{self.__bichinho.getAge()}"
 
     def Play(self):
-        if self.__bichinho.alive == True:
-            
-
-    
+        if self.__bichinho.getAlive() == True and self.__bichinho.getEnergy() <= self.__bichinho.getEnergyMax() and self.__bichinho.getAge() >= 0:
+            self.__bichinho.setEnergy(self.__bichinho.getEnergy() -2)
+            self.__bichinho.setClean(self.__bichinho.getClean() -3)
+            self.__bichinho.setAge(self.__bichinho.getAge() +1)
+        else:
+            print("fail: pet esta morto")
 
     def Shower(self):
         if self.__bichinho.alive == True:
@@ -82,3 +70,32 @@ class Game:
             self.bichinho.setEnergy(self.bichinho.getEnergyMax())
         else:
             print("fail: pet esta morto")
+
+
+def main():
+    game = Tamagochi()
+    while True:
+        line: str = input()
+        arg: list[str] = line.split(" ")
+        print("$" + line)
+
+        if arg[0] == "end":
+            break
+        elif arg[0] == "shower":
+            print(game.Shower())
+        elif arg[0] == "play":
+            print(game.Play())
+        elif arg[0] == "sleep":
+            print(game.Sleep())
+        elif arg[0] == "show":
+            print(game)
+        elif arg[0] == "set":
+            game.setEnergy(int(arg[1]))
+            game.setClean(int(arg[2]))
+            game.setAge(int(arg[3]))
+        elif arg[0] == "init":
+            game: Game = Game(Tamagochi(int(arg[1]),int(arg[2])))
+        else:
+            print("fail: pet esta morto")
+
+main()
