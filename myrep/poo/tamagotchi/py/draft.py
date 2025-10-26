@@ -36,9 +36,9 @@ class Tamagochi:
     def getCleanMax(self):
         return self.__cleanMax
     def getEnergy(self):
-        return self.__energyMax
+        return self.__energy
     def getClean(self):
-        return self.__cleanMax
+        return self.__clean
     def getAge(self):
         return self.__age
     def getAlive(self):
@@ -53,21 +53,36 @@ class Game:
 
     def Play(self):
         if self.__bichinho.getAlive() == True and self.__bichinho.getEnergy() <= self.__bichinho.getEnergyMax() and self.__bichinho.getAge() >= 0:
-            self.__bichinho.setEnergy(self.__bichinho.getEnergy() -2)
-            self.__bichinho.setClean(self.__bichinho.getClean() -3)
+            if self.__bichinho.getEnergy() -2 <= 0:
+                self.__bichinho.setEnergy(0)
+                self.__bichinho.setAlive(False)
+                print('fail: pet morreu de fraqueza')
+            else:
+                self.__bichinho.setEnergy(self.__bichinho.getEnergy() -2)
+            if self.__bichinho.getClean() -3 <= 0:
+                self.__bichinho.setClean(0)
+                self.__bichinho.setAlive(False)
+                print('fail: pet morreu de sujeira')
+            else:
+                self.__bichinho.setClean(self.__bichinho.getClean() -3)
             self.__bichinho.setAge(self.__bichinho.getAge() +1)
         else:
             print("fail: pet esta morto")
 
     def Shower(self):
-        if self.__bichinho.alive == True:
-            self.bichinho.setClean(self.bichinho.getCleanMax())
+        if self.__bichinho.getAlive() == True:
+            self.__bichinho.setClean(self.__bichinho.getCleanMax())
+            self.__bichinho.setEnergy(self.__bichinho.getEnergy() - 3)
+            self.__bichinho.setAge(self.__bichinho.getAge() + 2)
         else:
             print("fail: pet esta morto")
 
     def Sleep(self):
-        if self.__bichinho.energy <= self.__bichinho.energyMax and self.__bichinho.energy > 0 and self.__bichinho.alive == True:
-            self.bichinho.setEnergy(self.bichinho.getEnergyMax())
+        if self.__bichinho.getEnergy() > self.__bichinho.getEnergyMax() - 5:
+            print('fail: nao esta com sono')
+        elif self.__bichinho.getAlive() == True:
+            self.__bichinho.setAge(self.__bichinho.getAge() + self.__bichinho.getEnergyMax() - self.__bichinho.getEnergy())
+            self.__bichinho.setEnergy(self.__bichinho.getEnergyMax())
         else:
             print("fail: pet esta morto")
 
@@ -82,11 +97,11 @@ def main():
         if arg[0] == "end":
             break
         elif arg[0] == "shower":
-            print(game.Shower())
+            game.Shower()
         elif arg[0] == "play":
-            print(game.Play())
+            game.Play()
         elif arg[0] == "sleep":
-            print(game.Sleep())
+            game.Sleep()
         elif arg[0] == "show":
             print(game)
         elif arg[0] == "set":

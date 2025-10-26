@@ -112,8 +112,98 @@
         },
         {
             "label": "2025-10-26_15-02-13",
-            "content": "class Tamagochi:\n    def __init__(self, energyMax: int = 100, cleanMax: int = 100):\n        self.__energyMax = energyMax\n        self.__cleanMax = cleanMax\n        self.__energy = energyMax\n        self.__clean = cleanMax\n        self.__age = 0\n        self.__alive = True\n        self.setEnergyMax(energyMax)\n        self.setCleanMax(cleanMax)\n        self.setEnergy(energyMax)\n        self.setClean(cleanMax)\n        self.setAge(0)\n        self.setAlive(True)\n\n    def setEnergyMax(self, energyMax):\n        self.__energyMax = energyMax\n    \n    def setCleanMax(self, cleanMax):\n        self.__cleanMax = cleanMax\n    \n    def setEnergy(self, energy):\n        self.__energy = energy\n    \n    def setClean(self, clean):\n        self.__clean = clean\n    \n    def setAge(self, age):\n        self.__age = age\n\n    def setAlive(self, alive):\n        self.__alive = alive\n    \n    def getEnergyMax(self):\n        return self.__energyMax\n    def getCleanMax(self):\n        return self.__cleanMax\n    def getEnergy(self):\n        return self.__energyMax\n    def getClean(self):\n        return self.__cleanMax\n    def getAge(self):\n        return self.__age\n    def getAlive(self):\n        return self.__alive\n\nclass Game:\n    def __init__(self, game: Tamagochi):\n        self.__bichinho = game\n    \n    def __str__(self):\n        return f\"E:{self.__bichinho.getEnergy()}/{self.__bichinho.getEnergyMax()}, L:{self.__bichinho.getClean()}/{self.__bichinho.getCleanMax()}, I:{self.__bichinho.getAge()}\"\n\n    def Play(self):\n        if self.__bichinho.getAlive() == True and self.__bichinho.getEnergy() <= self.__bichinho.getEnergyMax() and self.__bichinho.getAge() >= 0:\n            self.__bichinho.setEnergy(self.__bichinho.getEnergy() -2)\n            self.__bichinho.setClean(self.__bichinho.getClean() -3)\n            self.__bichinho.setAge(self.__bichinho.getAge() +1)\n        else:\n            print(\"fail: pet esta morto\")\n\n    def Shower(self):\n        if self.__bichinho.alive == True:\n            self.bichinho.setClean(self.bichinho.getCleanMax())\n        else:\n            print(\"fail: pet esta morto\")\n\n    def Sleep(self):\n        if self.__bichinho.energy <= self.__bichinho.energyMax and self.__bichinho.energy > 0 and self.__bichinho.alive == True:\n            self.bichinho.setEnergy(self.bichinho.getEnergyMax())\n        else:\n            print(\"fail: pet esta morto\")\n\n\ndef main():\n    game = Tamagochi()\n    while True:\n        line: str = input()\n        arg: list[str] = line.split(\" \")\n        print(\"$\" + line)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"shower\":\n            print(game.Shower())\n        elif arg[0] == \"play\":\n            print(game.Play())\n        elif arg[0] == \"sleep\":\n            print(game.Sleep())\n        elif arg[0] == \"show\":\n            print(game)\n        elif arg[0] == \"set\":\n            game.setEnergy(int(arg[1]))\n            game.setClean(int(arg[2]))\n            game.setAge(int(arg[3]))\n        elif arg[0] == \"init\":\n            game: Game = Game(Tamagochi(int(arg[1]),int(arg[2])))\n        else:\n            print(\"fail: pet esta morto\")\n\nmain()",
+            "content": "@@ -1033,24 +1033,27 @@\n elf.__energy\n+Max\n %0A    def get\n@@ -1088,24 +1088,27 @@\n self.__clean\n+Max\n %0A    def get\n",
             "lines": "101"
+        },
+        {
+            "label": "2025-10-26_20-13-21",
+            "content": "@@ -2664,24 +2664,30 @@\n             \n+print(\n game.Play()%0A\n@@ -2685,16 +2685,17 @@\n e.Play()\n+)\n %0A       \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_20-13-54",
+            "content": "@@ -2136,35 +2136,30 @@\n .__bichinho.\n-getE\n+e\n nergy\n-()\n  %3C= self.__b\n@@ -2162,36 +2162,33 @@\n .__bichinho.\n-getE\n+e\n nergyMax\n () and self.\n@@ -2167,34 +2167,32 @@\n chinho.energyMax\n-()\n  and self.__bich\n@@ -2196,27 +2196,22 @@\n ichinho.\n-getE\n+e\n nergy\n-()\n  %3E 0 and\n@@ -2223,34 +2223,29 @@\n .__bichinho.\n-getA\n+a\n live\n-()\n  == True:%0A  \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_20-14-46",
+            "content": "@@ -2271,34 +2271,32 @@\n            self.\n-__\n bichinho.setEner\n@@ -2295,34 +2295,32 @@\n .setEnergy(self.\n-__\n bichinho.getEner\n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_20-15-06",
+            "content": "@@ -2744,24 +2744,30 @@\n             \n+print(\n game.Sleep()\n@@ -2766,16 +2766,17 @@\n .Sleep()\n+)\n %0A       \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_20-15-22",
+            "content": "@@ -2336,132 +2336,8 @@\n ())%0A\n-            self.__bichinho.setAge(self.__bichinho.getAge() + self.__bichinho.getEnergyMax() - self.__bichinho.getEnergy())%0A\n     \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-10-26_20-18-08",
+            "content": "@@ -2254,32 +2254,102 @@\n live() == True:%0A\n+            self.__bichinho.setEnergy(self.__bichinho.getEnergyMax())%0A\n             self\n@@ -2460,78 +2460,8 @@\n ())%0A\n-            self.__bichinho.setEnergy(self.__bichinho.getEnergyMax())%0A\n     \n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-10-26_20-18-49",
+            "content": "@@ -1952,34 +1952,29 @@\n .__bichinho.\n-getA\n+a\n live\n-()\n  == True:%0A  \n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-10-26_20-19-08",
+            "content": "@@ -1985,34 +1985,32 @@\n            self.\n-__\n bichinho.setClea\n@@ -2008,34 +2008,32 @@\n o.setClean(self.\n-__\n bichinho.getClea\n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-10-26_20-19-27",
+            "content": "@@ -2757,24 +2757,30 @@\n             \n+print(\n game.Shower(\n@@ -2780,16 +2780,17 @@\n Shower()\n+)\n %0A       \n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-10-26_20-19-43",
+            "content": "@@ -2048,144 +2048,8 @@\n ())%0A\n-            self.__bichinho.setEnergy(self.__bichinho.getEnergy() - 2)%0A            self.__bichinho.setAge(self.__bichinho.getAge() + 2)%0A\n     \n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-10-26_20-20-46",
+            "content": "@@ -2112,17 +2112,17 @@\n rgy() - \n-3\n+2\n )%0A      \n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-10-26_20-20-58",
+            "content": "@@ -2297,17 +2297,17 @@\n nergy() \n-=\n+%3C\n = self._\n@@ -2334,67 +2334,48 @@\n ax()\n-:%0A            print('fail: nao esta com sono')%0A        elif\n+ and self.__bichinho.getEnergy() %3E 0 and\n  sel\n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-10-26_20-23-38",
+            "content": "@@ -2297,17 +2297,18 @@\n nergy() \n-%3E\n+==\n  self.__\n@@ -2334,12 +2334,8 @@\n ax()\n- - 5\n :%0A  \n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-10-26_20-24-54",
+            "content": "@@ -1853,215 +1853,8 @@\n  +1)\n-%0A%0A            if self.__bichinho.getEnergy() %3C= 0:%0A                print('fail: pet morreu de fraqueza')%0A            elif self.__bichinho.getClean() %3C= 0:%0A                print('fail: pet morreu de sujeira')\n %0A   \n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-10-26_20-27-00",
+            "content": "@@ -1904,56 +1904,8 @@\n  0:%0A\n-                self.__bichinho.setAlive(False)%0A\n     \n@@ -2008,56 +2008,8 @@\n  0:%0A\n-                self.__bichinho.setAlive(False)%0A\n     \n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-10-26_20-28-07",
+            "content": "@@ -1652,35 +1652,32 @@\n  0:%0A            \n-if \n self.__bichinho.\n@@ -1668,33 +1668,33 @@\n self.__bichinho.\n-g\n+s\n etEnergy() -2 %3C=\n@@ -1690,36 +1690,8 @@\n rgy(\n-) -2 %3C= 0:~%0A                \n self\n@@ -1694,33 +1694,33 @@\n self.__bichinho.\n-s\n+g\n etEnergy(0)%0A    \n@@ -1712,23 +1712,22 @@\n tEnergy(\n-0)%0A    \n+) -2)%0A\n         \n@@ -1753,97 +1753,45 @@\n .set\n-Alive(False)%0A                print('fail: pet morreu de fraqueza')%0A            else:%0A    \n+Clean(self.__bichinho.getClean() -3)%0A\n     \n@@ -1809,38 +1809,35 @@\n f.__bichinho.set\n-Energy\n+Age\n (self.__bichinho\n@@ -1836,36 +1836,34 @@\n bichinho.get\n-Energy() -2)\n+Age() +1)%0A\n %0A           \n@@ -1889,69 +1889,23 @@\n .get\n-Clean() -3\n+Energy()\n  %3C= 0:%0A\n-                self.__bichinho.setClean(0)%0A\n     \n@@ -1995,14 +1995,15 @@\n  de \n-sujeir\n+fraquez\n a')%0A\n@@ -2020,53 +2020,11 @@\n   el\n-se:%0A                self.__bichinho.setClean(\n+if \n self\n@@ -2038,35 +2038,37 @@\n inho.getClean() \n--3)\n+%3C= 0:\n %0A            sel\n@@ -2056,32 +2056,36 @@\n  0:%0A            \n+    \n self.__bichinho.\n@@ -2092,38 +2092,71 @@\n setA\n-ge(self.__bichinho.getAge() +1\n+live(False)%0A                print('fail: pet morreu de sujeira'\n )%0A  \n",
+            "lines": "113"
+        },
+        {
+            "label": "2025-10-26_20-33-36",
+            "content": "@@ -1695,24 +1695,25 @@\n y() -2 %3C= 0:\n+~\n %0A           \n",
+            "lines": "116"
+        },
+        {
+            "label": "2025-10-26_20-33-44",
+            "content": "class Tamagochi:\n    def __init__(self, energyMax: int = 100, cleanMax: int = 100):\n        self.__energyMax = energyMax\n        self.__cleanMax = cleanMax\n        self.__energy = energyMax\n        self.__clean = cleanMax\n        self.__age = 0\n        self.__alive = True\n        self.setEnergyMax(energyMax)\n        self.setCleanMax(cleanMax)\n        self.setEnergy(energyMax)\n        self.setClean(cleanMax)\n        self.setAge(0)\n        self.setAlive(True)\n\n    def setEnergyMax(self, energyMax):\n        self.__energyMax = energyMax\n    \n    def setCleanMax(self, cleanMax):\n        self.__cleanMax = cleanMax\n    \n    def setEnergy(self, energy):\n        self.__energy = energy\n    \n    def setClean(self, clean):\n        self.__clean = clean\n    \n    def setAge(self, age):\n        self.__age = age\n\n    def setAlive(self, alive):\n        self.__alive = alive\n    \n    def getEnergyMax(self):\n        return self.__energyMax\n    def getCleanMax(self):\n        return self.__cleanMax\n    def getEnergy(self):\n        return self.__energy\n    def getClean(self):\n        return self.__clean\n    def getAge(self):\n        return self.__age\n    def getAlive(self):\n        return self.__alive\n\nclass Game:\n    def __init__(self, game: Tamagochi):\n        self.__bichinho = game\n    \n    def __str__(self):\n        return f\"E:{self.__bichinho.getEnergy()}/{self.__bichinho.getEnergyMax()}, L:{self.__bichinho.getClean()}/{self.__bichinho.getCleanMax()}, I:{self.__bichinho.getAge()}\"\n\n    def Play(self):\n        if self.__bichinho.getAlive() == True and self.__bichinho.getEnergy() <= self.__bichinho.getEnergyMax() and self.__bichinho.getAge() >= 0:\n            if self.__bichinho.getEnergy() -2 <= 0:\n                self.__bichinho.setEnergy(0)\n                self.__bichinho.setAlive(False)\n                print('fail: pet morreu de fraqueza')\n            else:\n                self.__bichinho.setEnergy(self.__bichinho.getEnergy() -2)\n            if self.__bichinho.getClean() -3 <= 0:\n                self.__bichinho.setClean(0)\n                self.__bichinho.setAlive(False)\n                print('fail: pet morreu de sujeira')\n            else:\n                self.__bichinho.setClean(self.__bichinho.getClean() -3)\n            self.__bichinho.setAge(self.__bichinho.getAge() +1)\n        else:\n            print(\"fail: pet esta morto\")\n\n    def Shower(self):\n        if self.__bichinho.getAlive() == True:\n            self.__bichinho.setClean(self.__bichinho.getCleanMax())\n            self.__bichinho.setEnergy(self.__bichinho.getEnergy() - 3)\n            self.__bichinho.setAge(self.__bichinho.getAge() + 2)\n        else:\n            print(\"fail: pet esta morto\")\n\n    def Sleep(self):\n        if self.__bichinho.getEnergy() > self.__bichinho.getEnergyMax() - 5:\n            print('fail: nao esta com sono')\n        elif self.__bichinho.getAlive() == True:\n            self.__bichinho.setAge(self.__bichinho.getAge() + self.__bichinho.getEnergyMax() - self.__bichinho.getEnergy())\n            self.__bichinho.setEnergy(self.__bichinho.getEnergyMax())\n        else:\n            print(\"fail: pet esta morto\")\n\n\ndef main():\n    game = Tamagochi()\n    while True:\n        line: str = input()\n        arg: list[str] = line.split(\" \")\n        print(\"$\" + line)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"shower\":\n            game.Shower()\n        elif arg[0] == \"play\":\n            game.Play()\n        elif arg[0] == \"sleep\":\n            game.Sleep()\n        elif arg[0] == \"show\":\n            print(game)\n        elif arg[0] == \"set\":\n            game.setEnergy(int(arg[1]))\n            game.setClean(int(arg[2]))\n            game.setAge(int(arg[3]))\n        elif arg[0] == \"init\":\n            game: Game = Game(Tamagochi(int(arg[1]),int(arg[2])))\n        else:\n            print(\"fail: pet esta morto\")\n\nmain()",
+            "lines": "116"
         }
     ]
 }

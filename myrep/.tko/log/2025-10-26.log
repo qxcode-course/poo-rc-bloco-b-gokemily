@@ -83,3 +83,27 @@
 2025-10-26 20:09:58, EXEC, v:1, k:poo@grafite, mode:FULL, rate:100, size:113
 2025-10-26 20:10:09, MOVE, v:1, k:poo@grafite, mode:BACK
 2025-10-26 20:10:51, SELF, v:1, k:poo@grafite, rate:100, human:_, other:_, alone:7, study:120
+2025-10-26 20:11:24, MOVE, v:1, k:poo@tamagotchi, mode:PICK
+2025-10-26 20:11:25, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12
+2025-10-26 20:13:21, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12, size:101
+2025-10-26 20:13:54, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:25, size:101
+2025-10-26 20:14:46, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:25, size:101
+2025-10-26 20:15:06, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:25, size:101
+2025-10-26 20:15:22, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:25, size:101
+2025-10-26 20:18:08, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:25, size:102
+2025-10-26 20:18:18, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:25
+2025-10-26 20:18:26, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:25
+2025-10-26 20:18:49, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:37, size:102
+2025-10-26 20:19:08, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:37, size:102
+2025-10-26 20:19:27, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:37, size:102
+2025-10-26 20:19:43, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:37, size:102
+2025-10-26 20:20:46, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:37, size:104
+2025-10-26 20:20:58, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:50, size:104
+2025-10-26 20:23:38, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:50, size:106
+2025-10-26 20:24:54, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:62, size:106
+2025-10-26 20:27:00, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:75, size:111
+2025-10-26 20:28:07, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:87, size:113
+2025-10-26 20:33:37, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:0, size:116
+2025-10-26 20:33:44, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:100, size:116
+2025-10-26 20:34:29, MOVE, v:1, k:poo@tamagotchi, mode:BACK
+2025-10-26 20:35:59, SELF, v:1, k:poo@tamagotchi, rate:100, human:_, alone:7, study:250
