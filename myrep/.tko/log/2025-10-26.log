@@ -52,3 +52,20 @@
 2025-10-26 17:09:50, SELF, v:1, k:poo@motoca, rate:100, human:_, other:_, alone:6, study:90
 2025-10-26 17:10:09, MOVE, v:1, k:poo@motouber, mode:PICK
 2025-10-26 17:10:17, MOVE, v:1, k:poo@motouber, mode:BACK
+2025-10-26 18:08:56, MOVE, v:1, k:poo@motouber, mode:PICK
+2025-10-26 18:09:00, EXEC, v:1, k:poo@motouber, mode:FULL, rate:50, size:86
+2025-10-26 18:10:12, EXEC, v:1, k:poo@motouber, mode:FULL, rate:50, size:89
+2025-10-26 18:14:00, EXEC, v:1, k:poo@motouber, mode:FULL, rate:75, size:89
+2025-10-26 18:14:12, EXEC, v:1, k:poo@motouber, mode:FULL, rate:75, size:89
+2025-10-26 18:15:57, EXEC, v:1, k:poo@motouber, mode:FULL, rate:100, size:90
+2025-10-26 18:17:15, MOVE, v:1, k:poo@motouber, mode:BACK
+2025-10-26 18:19:19, SELF, v:1, k:poo@motouber, rate:100, human:_, alone:8, study:250
+2025-10-26 18:19:37, SELF, v:1, k:poo@motoca, rate:100, human:_, other:_, alone:8, study:90
+2025-10-26 18:19:37, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-26 18:20:02, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-26 18:20:07, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-26 18:20:09, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100
+2025-10-26 18:20:12, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-26 18:22:23, SELF, v:1, k:poo@relogio, rate:100, human:_, alone:9, study:300
+2025-10-26 18:22:58, MOVE, v:1, k:poo@tamagotchi, mode:PICK
+2025-10-26 18:23:00, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12

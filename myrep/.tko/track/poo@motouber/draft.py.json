@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_18-09-00",
+            "content": "@@ -116,74 +116,8 @@\n ey%0A%0A\n-    def setMoney(self, money: int):%0A        self.__money = money%0A%0A\n     \n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-10-26_18-10-12",
+            "content": "@@ -1643,12 +1643,8 @@\n urn \n-str(\n pass\n@@ -1655,17 +1655,16 @@\n rQueSaiu\n-)\n  + 'left\n",
+            "lines": "89"
+        },
+        {
+            "label": "2025-10-26_18-14-00",
+            "content": "@@ -1664,17 +1664,16 @@\n aiu) + '\n- \n left'%0A%0A \n",
+            "lines": "89"
+        },
+        {
+            "label": "2025-10-26_18-14-12",
+            "content": "@@ -1509,92 +1509,8 @@\n ))%0A%0A\n-            self.getDriver().setMoney(self.getDriver().getMoney() + self.getCost())%0A\n     \n",
+            "lines": "89"
+        },
+        {
+            "label": "2025-10-26_18-15-57",
+            "content": "class Pessoa:\n    def __init__(self, name : str, money: int):\n        self.__name = name\n        self.__money = money\n\n    def setMoney(self, money: int):\n        self.__money = money\n\n    def getMoney(self):\n        return self.__money\n\n    def getName(self):\n        return self.__name\n\n    def __str__(self):\n        return f\"{self.getName()}:{self.getMoney()}\"\n\nclass Motouber:\n    def __init__(self):\n        self.__cost : int = 0\n        self.__driver : Pessoa | None = None\n        self.__passenger: Pessoa | None = None \n\n    def getCost(self) -> int:\n        return self.__cost\n    def getPassenger(self) -> Pessoa:\n        return self.__passenger\n    def getDriver(self) -> Pessoa:\n        return self.__driver\n\n    def setDriver(self, driver: Pessoa):\n        self.__driver = driver\n    def setPassenger(self, passenger: Pessoa):\n        if self.getDriver() != None:\n            self.__passenger = passenger\n    def setCost(self, cost: int ):\n        self.__cost = cost\n\n    def __str__(self) -> str:\n        return f\"Cost: {self.getCost()}, Driver: {self.getDriver()}, Passenger: {self.getPassenger()}\"\n\n    def LeavePass(self):\n        if self.getPassenger == None:\n            return 'fail'\n        else:\n            if self.getPassenger().getMoney() < self.getCost():\n                print('fail: Passenger does not have enough money')\n                self.getPassenger().setMoney(0)\n            else:\n                self.getPassenger().setMoney(self.getPassenger().getMoney() - self.getCost())\n\n            self.getDriver().setMoney(self.getDriver().getMoney() + self.getCost())\n            self.setCost(0)\n            passengerQueSaiu = self.getPassenger()\n            self.setPassenger(None)\n            return str(passengerQueSaiu) + ' left'\n\n    def Drive(self, distance: int):\n        if self.getPassenger() == None and self.getDriver() == None:\n            print('fail: empty motorcycle')\n        else:\n            self.setCost(self.getCost() + distance)\n\n\n\ndef main():\n    motouber = Motouber()\n    while True:\n        line: str = input()\n        arg: list[str] = line.split(\" \")\n        print(\"$\" + line)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"setDriver\":\n            motouber.setDriver(Pessoa(arg[1], int(arg[2])))\n        elif arg[0] == \"setPass\":\n            motouber.setPassenger(Pessoa(arg[1], int(arg[2])))\n        elif arg[0] == \"leavePass\":\n            print(motouber.LeavePass())\n        elif arg[0] == \"drive\":\n            motouber.Drive(int(arg[1]))\n        elif arg[0] == \"show\":\n            print(motouber)\n        elif arg[0] == \"init\":\n            motouber: Motouber = Motouber()\n        else:\n            print(\"fail: comando nao existe\")\n\nmain()",
+            "lines": "90"
+        }
+    ]
+}
