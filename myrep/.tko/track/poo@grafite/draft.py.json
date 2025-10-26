@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_20-02-01",
+            "content": "@@ -1683,17 +1683,16 @@\n ckness()\n-:\n %0A       \n",
+            "lines": "109"
+        },
+        {
+            "label": "2025-10-26_20-02-23",
+            "content": "@@ -2822,25 +2822,18 @@\n ead(\n-int(\n arg%5B1%5D\n-)\n , \n-floa\n+in\n t(ar\n@@ -2843,16 +2843,20 @@\n %5D), \n+int(\n arg%5B3%5D))\n %0A   \n@@ -2851,16 +2851,17 @@\n arg%5B3%5D))\n+)\n %0A       \n@@ -3097,20 +3097,18 @@\n  Pencil(\n-floa\n+in\n t(arg%5B1%5D\n",
+            "lines": "109"
+        },
+        {
+            "label": "2025-10-26_20-03-11",
+            "content": "@@ -2070,128 +2070,8 @@\n tr:%0A\n-        if self.getTip() == None:%0A            return f'calibre: %7Bself.getThickness()%7D, grafite: null'%0A        else:%0A    \n     \n",
+            "lines": "109"
+        },
+        {
+            "label": "2025-10-26_20-04-05",
+            "content": "@@ -19,32 +19,43 @@\n f __init__(self,\n+ size: int,\n  thickness: floa\n@@ -70,27 +70,16 @@\n ess: str\n-, size: int\n ):%0A     \n",
+            "lines": "112"
+        },
+        {
+            "label": "2025-10-26_20-04-39",
+            "content": "@@ -2938,20 +2938,18 @@\n rt(Lead(\n-floa\n+in\n t(arg%5B1%5D\n@@ -2955,28 +2955,31 @@\n %5D), \n+float(\n arg%5B2%5D\n+)\n , \n-int(\n arg%5B3%5D))\n )%0A  \n@@ -2974,17 +2974,16 @@\n arg%5B3%5D))\n-)\n %0A       \n",
+            "lines": "112"
+        },
+        {
+            "label": "2025-10-26_20-05-15",
+            "content": "@@ -1719,17 +1719,17 @@\n alibre i\n-n\n+m\n compativ\n",
+            "lines": "112"
+        },
+        {
+            "label": "2025-10-26_20-05-29",
+            "content": "@@ -2249,12 +2249,8 @@\n e: %7B\n-str(\n self\n@@ -2258,17 +2258,16 @@\n getTip()\n-)\n %7D'%0A%0A    \n",
+            "lines": "112"
+        },
+        {
+            "label": "2025-10-26_20-05-48",
+            "content": "@@ -945,26 +945,24 @@\n getThickness\n-()\n %7D:%7Bself.getH\n",
+            "lines": "112"
+        },
+        {
+            "label": "2025-10-26_20-06-13",
+            "content": "@@ -3099,20 +3099,16 @@\n il.write\n-Page\n ()%0A     \n",
+            "lines": "112"
+        },
+        {
+            "label": "2025-10-26_20-06-28",
+            "content": "@@ -2538,52 +2538,9 @@\n ze()\n- - 10:%0A            self.getTip().setSize(10)\n+:\n %0A   \n",
+            "lines": "112"
+        },
+        {
+            "label": "2025-10-26_20-09-58",
+            "content": "class Lead:\n    def __init__(self, thickness: float, hardness: str, size: int):\n        self.__size: int = size\n        self.__thickness: float = thickness\n        self.__hardness: str = hardness\n\n    def getHardness(self) -> int:\n        return self.__hardness\n    def getSize(self) -> int:\n        return self.__size\n    def getThickness(self) -> int:\n        return self.__thickness\n\n    def setHardness(self, hardness: int):\n        self.__hardness = hardness\n    def setThickness(self, thickness: int):\n        self.__thickness = thickness\n    def setSize(self, size: int):\n        self.__size = size\n\n    def usagePerSheet(self) -> int:\n        if self.getHardness() == \"HB\":\n            return 1\n        elif self.getHardness() == \"2B\":\n            return 2\n        elif self.getHardness() == \"4B\":\n            return 4\n        elif self.getHardness() == \"6B\":\n            return 6\n\n    def __str__(self) -> str:\n        return f'[{self.getThickness()}:{self.getHardness()}:{self.getSize()}]'\n\n    \nclass Pencil:\n    def __init__(self, thickness: float):\n        self.__tip: Lead = None\n        self.__thickness: float = thickness\n\n    def getTip(self) -> Lead:\n        return self.__tip\n    def getThickness(self):\n        return self.__thickness\n\n    def setTip(self, tip: Lead):\n        self.__tip = tip\n    def setThickness(self, thickness: float):\n        self.__thickness = thickness\n    \n    def hasGrafite(self):\n        if self.getTip() == None:\n            return False\n        else:\n            return True\n\n    def insert(self, tip: Lead):\n        if self.getTip() != None:\n            print('fail: ja existe grafite')\n        elif self.getThickness() != tip.getThickness():\n            print('fail: calibre incompativel')\n        else:\n            self.setTip(tip)\n        \n\n    def remove(self):\n        if self.getTip() != None:\n            grafiteRemovido = self.getTip()\n            self.setTip(None)\n            return grafiteRemovido\n        else:\n            print('fail: nao existe grafite')\n            return None\n\n    def __str__(self) -> str:\n        if self.getTip() == None:\n            return f'calibre: {self.getThickness()}, grafite: null'\n        else:\n            return f'calibre: {self.getThickness()}, grafite: {str(self.getTip())}'\n\n    def writePage(self):\n        if self.getTip() == None:\n            print('fail: nao existe grafite')\n        elif self.getTip().getSize() <= 10:\n            print('fail: tamanho insuficiente')\n        elif self.getTip().usagePerSheet() > self.getTip().getSize() - 10:\n            self.getTip().setSize(10)\n            print('fail: folha incompleta')\n        else:\n            self.getTip().setSize(self.getTip().getSize() - self.getTip().usagePerSheet())\n\ndef main():\n    pencil = Pencil(0.5)\n    while True:\n        line: str = input()\n        arg: list[str] = line.split(\" \")\n        print(\"$\" + line)\n\n        if arg[0] == \"end\":\n            break\n        elif arg[0] == \"insert\":\n            pencil.insert(Lead(float(arg[1]), arg[2], int(arg[3])))\n        elif arg[0] == \"remove\":\n            pencil.remove()\n        elif arg[0] == \"write\":\n            pencil.writePage()\n        elif arg[0] == \"show\":\n            print(pencil)\n        elif arg[0] == \"init\":\n            pencil: Pencil = Pencil(float(arg[1]))\n        else:\n            print(\"fail: comando nao existe\")\n\nmain()",
+            "lines": "113"
+        }
+    ]
+}

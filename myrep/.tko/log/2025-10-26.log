@@ -69,3 +69,17 @@
 2025-10-26 18:22:23, SELF, v:1, k:poo@relogio, rate:100, human:_, alone:9, study:300
 2025-10-26 18:22:58, MOVE, v:1, k:poo@tamagotchi, mode:PICK
 2025-10-26 18:23:00, EXEC, v:1, k:poo@tamagotchi, mode:FULL, rate:12
+2025-10-26 20:01:58, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-26 20:02:01, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:109
+2025-10-26 20:02:23, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:109
+2025-10-26 20:03:11, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:109
+2025-10-26 20:04:05, EXEC, v:1, k:poo@grafite, mode:FULL, rate:10, size:112
+2025-10-26 20:04:39, EXEC, v:1, k:poo@grafite, mode:FULL, rate:10, size:112
+2025-10-26 20:05:15, EXEC, v:1, k:poo@grafite, mode:FULL, rate:10, size:112
+2025-10-26 20:05:30, EXEC, v:1, k:poo@grafite, mode:FULL, rate:10, size:112
+2025-10-26 20:05:48, EXEC, v:1, k:poo@grafite, mode:FULL, rate:10, size:112
+2025-10-26 20:06:13, EXEC, v:1, k:poo@grafite, mode:FULL, rate:60, size:112
+2025-10-26 20:06:28, EXEC, v:1, k:poo@grafite, mode:FULL, rate:90, size:112
+2025-10-26 20:09:58, EXEC, v:1, k:poo@grafite, mode:FULL, rate:100, size:113
+2025-10-26 20:10:09, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-26 20:10:51, SELF, v:1, k:poo@grafite, rate:100, human:_, other:_, alone:7, study:120
