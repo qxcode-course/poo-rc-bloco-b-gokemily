@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-28_14-56-06",
+            "content": "class Bateria:\n    def __init__(self, capacidade):\n        self.__capacidade: int = capacidade\n        self.__carga: int = capacidade\n    \n    def setCapacidade(self, capacidade):\n        self.__capacidade = capacidade\n    def getCapacidade(self):\n        return self.__capacidade\n    \n    def setCarga(self, carga):\n        self.__carga = carga\n    def getCarga(self):\n        return self.__carga\n\nclass Notebook:\n    def __init__(self):\n        self.__ligado: bool = False\n        self.__bateria: Bateria | None = None\n    \n    def setLigado(self, ligado):\n        self.__ligado = ligado\n    def getLigado(self):\n        return self.__ligado\n    \n    def setBateria(self, bateria):\n        self.__bateria = bateria\n    def getBateria(self):\n        return self.__bateria\n\n    def Usar(self, tempo):\n        if self.getLigado() == True:\n            self.getBateria().setCarga(self.getBateria().getCarga() - tempo)\n            print(f\"Usando por {tempo} minutos\")\n            if self.getBateria().getCarga() == 0:\n                self.setLigado(False)\n        else:\n            print(\"erro: ligue o notebook primeiro\")\n\n    def Ligar(self):\n        if self.getLigado() == False and self.getBateria() != None and self.getBateria().getCarga() > 0:\n            self.setLigado(True)\n            print(\"notebook ligado\")\n\n    def Desligar(self):\n        if self.getLigado() == True:\n            self.setLigado(False)\n            print(\"notebook desligado\")\n\n    def Mostrar(self):\n        if self.getLigado() == True:\n            print(\"Status: Ligado\")\n        else:\n            print(\"Status: Desligado\")",
+            "lines": "54"
+        }
+    ]
+}
